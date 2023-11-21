@@ -8,10 +8,15 @@ public class Main {
             double salary = 100_000 +  50_100 * random.nextDouble();
             employees[i] = new Employee("Сотрудник " + i, salary, random.nextInt(2, 6));
         }
+
         printAllEmployees(employees);
         System.out.println();
+        System.out.println(getExpenses(employees));
+        System.out.println(getAverageSalsryPerson(employees));
         System.out.println(getMaxSalaryPerson(employees));
         System.out.println(getMinSalaryPerson(employees));
+        printPersons(employees);
+
     }
 
     public static void printAllEmployees(Employee[] employees) {
@@ -45,5 +50,15 @@ public class Main {
         }
         return maxEmployeeSalary;
     }
+
+    public static double getAverageSalsryPerson (Employee[] employees){
+        return getExpenses(employees) / employees.length;
+    }
+
+    public static void printPersons (Employee[] employees) {
+        for (Employee employee : employees) {
+            System.out.println(employee.getPerson());
+    }
+}
 }
 
