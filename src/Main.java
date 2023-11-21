@@ -5,7 +5,7 @@ public class Main {
         Employee[] employees = new Employee[10];
         java.util.Random random = new Random();
         for (int i = 0; i < employees.length; i++) {
-            double salary = 100_000 * 50_100 * random.nextDouble();
+            double salary = 100_000 +  50_100 * random.nextDouble();
             employees[i] = new Employee("Сотрудник " + i, salary, random.nextInt(2, 6));
         }
         printAllEmployees(employees);
