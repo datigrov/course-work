@@ -5,12 +5,14 @@ public class Employee {
     private double salary;
     private int department;
     private int id;
+    private static int personalId = 1;
 
 
     public Employee(String person, double salary, int department) {
         this.person = person;
         this.salary = salary;
         this.department = department;
+        this.id = personalId++;
     }
 
     public String getPerson() {
